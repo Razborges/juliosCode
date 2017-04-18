@@ -12,9 +12,9 @@ Um projeto deste porte não há necessidade de utilizar Redux porém é uma form
 
 ### Itens a serem implementados:
 
--[x] Criação projeto/webpack;
--[ ] Criação componente botao;
--[ ] Criação componente mensagem;
--[ ] Implementação de Redux;
--[ ] Implementação de rotas encriptar e decriptar;
--[ ] Implementação de layout;
+- [x] Criação projeto/webpack
+- [ ] Criação componente botao
+- [ ] Criação componente mensagem
+- [ ] Implementação de Redux
+- [ ] Implementação de rotas encriptar e decriptar
+- [ ] Implementação de layout
