@@ -1,7 +1,8 @@
 import React from 'react';
+import Counter from '../template/counter';
 
 export default props => (
     <div>
-        <h1>Teste</h1>
+        <Counter />
     </div>
 )
