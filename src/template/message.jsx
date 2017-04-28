@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { msgChanged, resultChanged, clear } from '../actions/messageAction';
+import { msgChanged, criptChanged, clear } from '../actions/messageAction';
 
 import Button from './button';
 
@@ -30,7 +30,8 @@ class Message extends Component {
                 }
             }
         }
-        resultChanged(resultAux);
+        console.log('função do componente ==>', resultAux);
+        criptChanged(resultAux);
     }
 
     decrypt() {
@@ -50,7 +51,8 @@ class Message extends Component {
                 }
             }
         }
-        resultChanged(resultAux);
+        console.log('função do componente ==>', resultAux);
+        criptChanged(resultAux);
     }
 
     render() {
@@ -60,13 +62,13 @@ class Message extends Component {
                 <Button action={this.encrypt} label='Criptografar' />
                 <Button action={this.decrypt} label='Descriptografar' />
                 <Button action={this.props.clear} label='Apagar' />
-                <p>{this.props.message.result}</p>
+                <p>{this.props.message.cript}</p>
             </div>
         )
     }
 };
 
 const mapStateToProps = state => ({ message: state.message, counter: state.counter });
-const mapDispatchToProps = dispatch => bindActionCreators({ msgChanged, resultChanged, clear }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ msgChanged, criptChanged, clear }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Message);

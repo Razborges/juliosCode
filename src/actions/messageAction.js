@@ -3,9 +3,19 @@ export const msgChanged = e => ({
     payload: e.target.value
 });
 
-export const resultChanged = resultMsg => ({
+export const criptChanged = function(payload) {
+    console.log('action ==>', payload);
+    return {
+        type: 'CRIPT_CHANGED',
+        payload
+    };
+};
+
+/*
+payload => ({
     type: 'RESULT_CHANGED',
-    payload: resultMsg
+    payload
 });
+*/
 
 export const clear = () => ({ type: 'CLEAR' });
