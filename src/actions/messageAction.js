@@ -4,7 +4,7 @@ export const msgChanged = e => ({
 });
 
 export const criptChanged = function(payload) {
-    console.log('action ==>', payload);
+    console.log('dentro da action ==>', payload);
     return {
         type: 'CRIPT_CHANGED',
         payload
