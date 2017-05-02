@@ -21,3 +21,9 @@ Um projeto deste porte não há necessidade de utilizar Redux porém é uma form
 - [x] Criação componente rodapé
 - [x] Implementação de Redux
 - [x] Implementação de layout
+
+<p align="center">
+<img src="./screens/1principal.png" alt="Tela principal do Código de Júlio César" width="30%" height="30%">
+<img src="./screens/2criptografando.png" alt="Criptografando a mensagem" width="30%" height="30%">
+<img src="./screens/3mensagem.png" alt="Mensagem criptografada" width="30%" height="30%">
+</p>
