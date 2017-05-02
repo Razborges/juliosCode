@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { msgChanged, criptChanged, clear } from '../actions/messageAction';
 
 import Button from './button';
+import Counter from './counter';
 
 class Message extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Message extends Component {
     }
 
     encrypt() {
-        let step = this.props.counter.step;
+        let step = this.props.counter.step;;
         let msg = this.props.message.msg.toUpperCase();
         let alpha = this.props.message.alpha;
         let resultAux = '';
@@ -24,18 +25,17 @@ class Message extends Component {
             } else {
                 for (let i = 0; i < alpha.length; i++) {
                     if(msg[j] === alpha[i]) {
-                        let num = (i + step) % alpha.length
+                        let num = (i + step) % alpha.length;
                         resultAux += alpha[num];
                     }
                 }
             }
         }
-        console.log('função do componente ==>', resultAux);
-        criptChanged(resultAux);
+        this.props.criptChanged(resultAux);
     }
 
     decrypt() {
-        let step = this.props.counter.step;
+        let step = this.props.counter.step;;
         let msg = this.props.message.msg.toUpperCase();
         let alpha = this.props.message.alpha;
         let resultAux = '';
@@ -45,24 +45,31 @@ class Message extends Component {
             } else {
                 for (let i = 0; i < alpha.length; i++) {
                     if(msg[j] === alpha[i]) {
-                        let num = (i - step) % alpha.length
+                        let num = (i + (alpha.length - step)) % alpha.length;
                         resultAux += alpha[num];
                     }
                 }
             }
         }
-        console.log('função do componente ==>', resultAux);
-        criptChanged(resultAux);
+        this.props.criptChanged(resultAux);
     }
 
     render() {
         return (
             <div>
-                <input onChange={this.props.msgChanged} type='text' value={this.props.message.msg} />
-                <Button action={this.encrypt} label='Criptografar' />
-                <Button action={this.decrypt} label='Descriptografar' />
-                <Button action={this.props.clear} label='Apagar' />
-                <p>{this.props.message.cript}</p>
+                <div className="o-main">
+                    <Counter />
+                    <div className="o-msg">
+                        <input onChange={this.props.msgChanged} type='text' value={this.props.message.msg} placeholder="Digite a sua mensagem" />
+                    </div>
+                </div>
+                <div className="o-actions">
+                    <Button mask="largebtn" action={this.encrypt} label='Encriptar' />
+                    <Button mask="largebtn" action={this.decrypt} label='Decriptar' />
+                </div>
+                <div className="o-cript">
+                    <p className="cript-result">{this.props.message.cript}</p>
+                </div>
             </div>
         )
     }

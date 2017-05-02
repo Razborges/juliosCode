@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import counterReducer from '../reducer/counterReducer';
-import messageReducer from '../reducer/messageReducer';
+import counterReducer from '../reducers/counterReducer';
+import messageReducer from '../reducers/messageReducer';
 
 const rootReducer = combineReducers({
     counter: counterReducer,

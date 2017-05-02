@@ -3,19 +3,7 @@ export const msgChanged = e => ({
     payload: e.target.value
 });
 
-export const criptChanged = function(payload) {
-    console.log('dentro da action ==>', payload);
-    return {
-        type: 'CRIPT_CHANGED',
-        payload
-    };
-};
-
-/*
-payload => ({
-    type: 'RESULT_CHANGED',
+export const criptChanged = payload => ({
+    type: 'CRIPT',
     payload
 });
-*/
-
-export const clear = () => ({ type: 'CLEAR' });

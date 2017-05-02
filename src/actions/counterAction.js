@@ -1,3 +1,3 @@
-export const inc = () => ({ type: 'INC' });
+export const inc = (payload) => ({ type: 'INC', payload });
 
-export const dec = () => ({ type: 'DEC' });
+export const dec = (payload) => ({ type: 'DEC', payload });

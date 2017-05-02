@@ -5,18 +5,13 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
-    console.log('dentro do reducer ==>', action.type, action.payload);
     switch(action.type) {
         case 'MSG_CHANGED':
             return { ...state, msg: action.payload };
-            break;
-        case 'CRIPT_CHANGED':
-            console.log('reducer CRIPT ==>', action.payload)
-            return { ...state, cript: action.payload };
-            break;
         case 'CLEAR':
             return { ...state, msg: '' };
-            break;
+        case 'CRIPT':
+            return { ...state, cript: action.payload, msg: '' };
         default:
             return state;
     }

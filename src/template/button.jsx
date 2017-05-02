@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default props => (
-    <button onClick={props.action}>{props.label}</button>
+    <button className={props.mask} onClick={props.action}>{props.label}</button>
 );

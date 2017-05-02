@@ -1,10 +1,12 @@
 import React from 'react';
-import Counter from '../template/counter';
-import Message from '../template/message';
+import Header from '../template/header';
+import MessageBox from '../template/messageBox';
+import Footer from '../template/footer';
 
 export default props => (
-    <div>
-        <Counter />
-        <Message />
+    <div className="container">
+        <Header />
+        <MessageBox />
+        <Footer />
     </div>
 )
