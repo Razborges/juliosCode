@@ -8,7 +8,7 @@ export default props => (
             <p className="detail-footer">Prof. Almir Silveira</p>
         </div>
         <div className="o-tec">
-            <p className="detail-footer">Desenvolvido com React</p>
+            <p className="detail-footer">Desenvolvido com ❤ usando React</p>
         </div>
     </div>
 )

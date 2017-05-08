@@ -56,7 +56,7 @@ class Message extends Component {
 
     render() {
         return (
-            <div>
+            <div className="o-principal">
                 <div className="o-main">
                     <Counter />
                     <div className="o-msg">
